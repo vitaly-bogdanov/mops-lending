@@ -10,9 +10,7 @@ export const bot = new Telegraf(process.env.BOT_TOKEN)
   .command('start', ctx => {
     ctx.reply(`Информация с формы обратной связи с сайта MOps 📣`);
     if (isIdExistService(ctx.message.from.id)) {
-      console.log('event 0');
-      sendFormDataEvent.on(data => {
-        console.log('event 1');
+      sendFormDataEvent.on(ctx.message.from.id, data => {
         ctx.reply(`Имя: ${data?.name || 'Пусто'}\nТелефон: ${data?.phone || 'Пусто'}\nОписание: ${data.description || 'Пусто'}`);
       });
     } else {

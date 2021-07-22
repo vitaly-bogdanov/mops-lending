@@ -13,3 +13,8 @@ export const isIdExistService = (id) => {
   console.log(config);
   return config.ids.indexOf(String(id)) !== -1;
 }
+
+export const getAllIdsService = () => {
+  const config = JSON.parse(fs.readFileSync('./server/server.config.json', 'utf-8'));
+  return config.ids;
+}
