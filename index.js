@@ -8,9 +8,9 @@ const key = fs.readFileSync('./cert/www.magnumopus.space.key', 'utf-8');
 const cert = fs.readFileSync('./cert/www.magnumopus.space.crt', 'utf-8');
 
 https.createServer({ key, cert }, app)
-  .listen(443, () => console.log('Server start!'));
+  .listen(1234, () => console.log('https server start!'));
 
 http.createServer(app)
-  .listen(80);
+  .listen(4321, () => console.log('http server start!'));
 
 bot.launch();
