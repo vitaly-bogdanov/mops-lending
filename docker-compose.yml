@@ -5,5 +5,4 @@ services:
     build: .
     restart: always
     ports:
-      - 80:4321
       - 443:1234
