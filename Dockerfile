@@ -10,4 +10,6 @@ RUN npm i
 
 EXPOSE 1234
 
+EXPOSE 4321
+
 ENTRYPOINT [ "npm", "run", "start" ]

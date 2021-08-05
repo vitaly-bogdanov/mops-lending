@@ -6,3 +6,4 @@ services:
     restart: always
     ports:
       - 443:1234
+      - 80:4321
